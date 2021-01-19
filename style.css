@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, lightgray, white);
+  font-family: sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  background-color: #3d6ded;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 120px;
+}
+
+.card {
+  align-items: center;
+  background-image: url(blueback.jpeg);
+  background-size: 100%;
+  /* background-image: linear-gradient(to bottom right, white, lightgray); */
+  border-radius: 1rem;
+  -webkit-box-shadow: 4px 4px 40px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 4px 4px 40px 0px rgba(0, 0, 0, 1);
+  box-shadow: 4px 4px 40px 0px rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px;
+  padding: 50px;
+  transition: padding 4s, background-image 4s;
+}
+.card:hover {
+  transform: skewY(5deg);
+  cursor: pointer;
+  opacity: 90%;
+}
+
+.nav-item {
+  align-self: flex-end;
+  color: #3d6ded;
+  font-size: 18px;
+  margin: 15px;
+  text-decoration: none;
+}
+
+.page-wrapper {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  background-color: #010626;
+  transition: background-color 4s;
+}
+
+.profile-image {
+  background-color: transparent;
+  border-radius: 50%;
+  border: transparent;
+  /* border: 2px solid #ffaa4e; */
+  color: white;
+  font-size: 32px;
+  height: 180px;
+  margin: 50px;
+  width: 180px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+#my-name {
+  color: black;
+  transition: color 4s;
+}
+h2 {
+  color: gray;
+  transition: color 4s;
+}
+.Titles {
+  font-family: "Black Ops One", cursive;
+}
+nav {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+}
+nav ul,
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+nav li {
+  display: inline-block;
+  text-align: center;
+  width: 10rem;
+  background-color: grey;
+  border-radius: 1rem;
+  text-transform: uppercase;
+}
+nav li a {
+  text-decoration: none;
+  color: #ffaa4e;
+  font-size: 20px;
+  display: block;
+  padding: 0.4rem;
+}
+nav li a:hover {
+  background-color: #f24819;
+  color: white;
+  border-radius: 1rem;
+}
+.Titles {
+  margin-top: 0;
+}
+#profile-image {
+  margin-bottom: 0;
+}
+.socialmedia {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.socialmedia li {
+  margin: 10px;
+}
+.socialmedia img {
+  width: 5rem;
+}
+.socialmedia img:hover {
+  display: block;
+}
+.socialmedia a:link {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: gray;
+}
+/*.socialmedia a:visited {
+  color: purple;
+  transition: color 4s;
+}*/
+#linkedin,
+#github,
+#stack {
+  color: black;
+  transition: color 4s;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+footer li {
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+footer a {
+  text-decoration: none;
+  color: black;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+footer a:hover {
+  color: #010626;
+}
+footer {
+  background-color: gray;
+  padding: 0;
+  margin: 0;
+  bottom: 0;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}

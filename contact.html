@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-image: url(blueback.jpeg);
+        color: white;
+        font-family: "Roboto", sans-serif;
+      }
+      nav {
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        top: 0;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+      }
+      nav li {
+        display: inline-block;
+        text-align: center;
+        width: 10rem;
+        background-color: grey;
+        border-radius: 1rem;
+        text-transform: uppercase;
+      }
+      nav li a {
+        text-decoration: none;
+        color: #ffaa4e;
+        font-size: 20px;
+        display: block;
+        padding: 0.4rem;
+      }
+      nav li a:hover {
+        background-color: #f24819;
+        color: white;
+        border-radius: 1rem;
+      }
+      h1 {
+        margin: 5rem;
+        text-align: center;
+        font-family: "Black Ops One", cursive;
+        font-size: 2.5rem;
+      }
+      fieldset {
+        border: 4px solid #f24819;
+        border-radius: 1rem;
+        margin: 3rem 9rem;
+        padding: 0 5rem;
+        background-color: #010626;
+      }
+      .personal {
+        margin: 3rem;
+      }
+      .personal li {
+        list-style-type: none;
+        margin: 5px;
+        padding: 5px;
+      }
+      legend {
+        color: #f24819;
+        font-family: Roboto, cursive;
+        font-size: 2rem;
+        background-color: #010626;
+        border: 2px solid #f24819;
+        border-radius: 1rem;
+      }
+      textarea {
+        height: 10rem;
+        padding: 1rem;
+        width: 100%;
+        margin: 1rem 0;
+      }
+      h2 {
+        font-size: 27px;
+        text-decoration: underline;
+      }
+      li {
+        list-style-type: none;
+      }
+      #subButton {
+        text-align: center;
+      }
+      #btnSubmit:disabled {
+        background-color: #9fccee;
+        color: gray;
+      }
+      #btnSubmit:disabled:hover {
+        background-color: #9fccee;
+        color: gray;
+      }
+      #btnSubmit {
+        border: 2px solid #f24819;
+        margin: 0;
+        padding: 2rem;
+        font-family: "Roboto", sans-serif;
+        font-size: 25px;
+        color: #f24819;
+      }
+      #btnSubmit:hover {
+        background-color: #010626;
+        color: white;
+      }
+      footer ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+      }
+      footer li {
+        display: inline-block;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+      }
+      footer a {
+        text-decoration: none;
+        color: black;
+        padding: 0;
+        margin: 0;
+        color: white;
+      }
+      footer a:hover {
+        color: #010626;
+      }
+      footer {
+        background-color: gray;
+        padding: 0;
+        margin: 0;
+        bottom: 0;
+        color: white;
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Now a Bit About You <br />(Your Contact Information)</h1>
+    <!--  IS THIS CORRECT FOR "ACTION"?
+<form action="https://api.github.com/users/IsraelTechChallengeITC"> -->
+    <form id="contactForm">
+      <fieldset>
+        <legend>The Basics</legend>
+        <ul class="personal">
+          <li>
+            <label for="firstname">First Name</label>
+            <input
+              required
+              type="text"
+              id="firstname"
+              name="firstname"
+              onkeyup="EnableDisable(this)"
+            />
+          </li>
+
+          <li>
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" />
+          </li>
+
+          <li>
+            <label for="email">E-mail</label>
+            <input
+              required
+              type="email"
+              id="email"
+              name="email"
+              placeholder="___________@______.___"
+              onkeyup="EnableDisable(this)"
+            />
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>Some Background</legend>
+        <h2>What led you to my website?</h2>
+        <ul>
+          <li>
+            <label>
+              <input
+                required
+                type="radio"
+                value="Search Engine"
+                name="source"
+                id="search"
+              />Search Engine</label
+            >
+          </li>
+          <li>
+            <label>
+              <input
+                required
+                type="radio"
+                value="You told me about it!"
+                name="source"
+                id="you"
+              />You told me about it!</label
+            >
+          </li>
+          <li>
+            <label>
+              <input
+                required
+                type="radio"
+                value="A mutual friend"
+                name="source"
+                id="friend"
+              />A mutual friend</label
+            >
+          </li>
+          <li>
+            <label>
+              <input
+                required
+                type="radio"
+                value="Other"
+                name="source"
+                id="other"
+              />Other</label
+            >
+          </li>
+        </ul>
+
+        <h2>How would you describe the level of your coding experience?</h2>
+        <ul>
+          <li>
+            <input
+              required
+              type="radio"
+              id="beginner"
+              name="experience"
+              value="What's coding?"
+            /><label for="beginner">What's coding?</label>
+          </li>
+
+          <li>
+            <input required type="radio" id="dabbled" name="experience" /><label
+              for="dabbled"
+              value="I've dabbled in it here and there."
+              >I've dabbled in it here and there.</label
+            >
+          </li>
+
+          <li>
+            <input required type="radio" id="degree" name="experience" /><label
+              for="degree"
+              value="I have a degree in Computer Science, but haven't begun to work
+              yet."
+            >
+              I have a degree in Computer Science, but haven't begun to work
+              yet.</label
+            >
+          </li>
+
+          <li>
+            <input
+              required
+              type="radio"
+              id="freelance"
+              name="experience"
+              value="I've been freelancing and/or tutoring for some time now."
+            /><label for="freelance">
+              I've been freelancing and/or tutoring for some time now.</label
+            >
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Final Thoughts?</legend>
+        <textarea
+          required
+          id="comments"
+          name="comments"
+          placeholder="I'd love to hear from you! Feel free to type your comments here..."
+          onkeyup="EnableDisable(this)"
+        ></textarea>
+      </fieldset>
+      <div id="subButton">
+        <button
+          onclick="uponSubmitting()"
+          type="submit"
+          id="btnSubmit"
+          disabled="disabled"
+        >
+          Click Here to Submit
+        </button>
+      </div>
+    </form>
+
+    <!-- <script src="portfolio.js"></script> -->
+
+    <script>
+      const theForm = document.querySelector("#contactForm");
+      const firstNameField = document.querySelector("#firstname");
+      const lastNameField = document.querySelector("#lastname");
+      const emailField = document.querySelector("#email");
+
+      const commentField = document.querySelector("#comments");
+
+      theForm.addEventListener("submit", uponSubmitting);
+
+      function uponSubmitting(event) {
+        // the selection of the FIRST radio-button question
+        const search = document.getElementById("search");
+        const you = document.getElementById("you");
+        const friend = document.getElementById("friend");
+        const other = document.getElementById("other");
+        let lead;
+        if (search.checked == true) {
+          lead = search.value;
+        } else if (you.checked == true) {
+          lead = you.value;
+        } else if (friend.checked == true) {
+          lead = friend.value;
+        } else if (other.checked == true) {
+          lead = other.value;
+        }
+        // the selection of the SECOND radio-button question
+        const beginner = document.getElementById("beginner");
+        const dabbled = document.getElementById("dabbled");
+        const degree = document.getElementById("degree");
+        const freelance = document.getElementById("freelance");
+        let experience;
+        if (beginner.checked == true) {
+          experince = beginner.value;
+        } else if (dabbled.checked == true) {
+          experience = dabbled.value;
+        } else if (degree.checked == true) {
+          experience = degree.value;
+        } else if (freelance.checked == true) {
+          experience = freelance.value;
+        }
+
+        // making sure the SUBMIT button doesn't take us to the top of page
+        event.preventDefault();
+        // Outputting the user's selections
+        console.log(
+          "First Name: " +
+            firstNameField.value +
+            ", Last Name: " +
+            lastNameField.value +
+            ", Email: " +
+            emailField.value +
+            ", Lead: " +
+            lead +
+            ", Experience: " +
+            experience +
+            ", Comment: " +
+            commentField.value
+        );
+      }
+      // Grab the button
+      const btnSubmit = document.getElementById("btnSubmit");
+
+      // State the condition
+      function EnableDisable() {
+        if (
+          firstNameField.value != "" &&
+          emailField.value != "" &&
+          commentField.value != ""
+        ) {
+          btnSubmit.disabled = false;
+        } else {
+          btnSubmit.disabled = true;
+        }
+      }
+    </script>
+    <footer>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+      <script src="portfolio.js"></script>
+    </footer>
+  </body>
+</html>
